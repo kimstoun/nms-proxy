@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package netConfigServe;
+
+import "google/api/annotations.proto";
+
+enum portType{
+	SENDPORT = 0;
+	RECVPORT = 1;
+	DEPIPORT = 2;//双向链路
+}
+ 
+message PortParameter {
+	int32 rioId = 1;
+	string appName = 2;
+     	string portName = 3;
+     	int32 slotSize = 4;
+     	portType type = 5;
+	string remoteAppName = 6;
+	string remotePortName = 7;
+     
+}
+message LinkParameter {
+    	PortParameter sendPort = 1;
+    	PortParameter recvPort = 2;
+	uint32  linkState =3;
+}
+
+message Links{
+	repeated LinkParameter lp = 1;
+}
+
+message Ports{
+	repeated PortParameter pp = 1;
+}
+message NodeInfo {
+     	int32 rioId = 1; 
+} 
+service NetConfig {
+	rpc RequestConfigLink(PortParameter) returns (PortParameter) {}
+	rpc QueryAllLinks(NodeInfo) returns (Links) {
+		option (google.api.http) = {
+		get: "/links/echo"
+     		};
+	}	
+}
