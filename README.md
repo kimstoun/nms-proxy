@@ -32,4 +32,6 @@ gateway &
 ./client -R -appname="app2" -portname="portrecv2" -rioid=11 -slotsize=1024 -remoteappname="app1" -remoteportname="portsend2" -porttype=1 &
 
  
-curl -X POST -k http://localhost:8080/links/echo 
+curl -X POST -k http://localhost:8080/links/echo
+
+curl -X GET -k http://localhost:8080/links/echo 
