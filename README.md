@@ -11,7 +11,7 @@ protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-
 go install 
 
 在client目录下
-go build  OO
+go build  
 
 server &
 
