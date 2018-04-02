@@ -8,17 +8,10 @@
 protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis   --go_out=plugins=grpc:. netServer.proto
 protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis --grpc-gateway_out=logtostderr=true:. netServer.proto
 在server目录下
-go install 1
-
-
-
-
-
-
+go install 
 
 在client目录下
-go build  1
-
+go build  
 
 server &
 
