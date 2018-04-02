@@ -17,7 +17,7 @@ go install 1
 
 
 在client目录下
-go build
+go build  1
 
 
 server &
