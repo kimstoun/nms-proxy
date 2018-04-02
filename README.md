@@ -10,7 +10,9 @@ protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-
 在server目录下
 go install
 又有用了
-没有用1
+
+lallala
+
 
 
 
