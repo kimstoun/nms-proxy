@@ -1,5 +1,5 @@
 # nms-proxy
-   
+
 第一次创建
 生成proto文件
 在pb目录下
@@ -11,7 +11,9 @@ protoc -I/usr/local/include -I.   -I$GOPATH/src   -I$GOPATH/src/github.com/grpc-
 go install 
 
 在client目录下
-go build  
+
+go build
+
 
 server &
 
@@ -29,6 +31,4 @@ gateway &
 ./client -R -appname="app2" -portname="portrecv2" -rioid=11 -slotsize=1024 -remoteappname="app1" -remoteportname="portsend2" -porttype=1 &
 
  
-curl -X POST -k http://localhost:8080/links/echo 
-
-
+curl -X GET -k http://localhost:8080/links/echo 
