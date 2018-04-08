@@ -1,6 +1,6 @@
 package linkDb
 
-import pb "gaoyl/pb"
+import pb "github.com/kimstoun/nms-proxy/pb"
 import "fmt"
 import "errors"
 

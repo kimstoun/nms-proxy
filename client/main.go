@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	pb "gaoyl/pb"
+	pb "github.com/kimstoun/nms-proxy/pb"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"
@@ -43,6 +43,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
+	
 	flag.Parse()
 	defer conn.Close()
 	c := pb.NewNetConfigClient(conn)

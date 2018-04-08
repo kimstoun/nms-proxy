@@ -2,7 +2,7 @@ package linkDb
 
 import "fmt"
 import "sync"
-import pb "gaoyl/pb"
+import pb "github.com/kimstoun/nms-proxy/pb"
 import "errors"
 
 type LinkKey struct {
@@ -26,7 +26,6 @@ const (
 	PORTWAITBECONFIG
 	PORTNOTEXIST
 )
-
 const (
 	STATECHANGED = 1 + iota
 	STATEUNCHANGED
