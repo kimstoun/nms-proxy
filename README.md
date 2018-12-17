@@ -32,3 +32,8 @@ gateway &
 
  
 curl -X GET -k http://localhost:8080/links/echo 
+
+
+
+
+
